@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Simple calc
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,36 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="8" offset="2">
+
+        <ion-item style="font-size: 2rem;">
+          <ion-label>Nb 1</ion-label>
+          <ion-input type="number" id="nb1"></ion-input>
+        </ion-item>
+        <ion-item style="font-size: 2rem;">
+          <ion-label>Nb 2</ion-label>
+          <ion-input type="number" id="nb2"></ion-input>
+        </ion-item>
+        <ion-col size="6" offset="3">
+          <ion-button color="primary" style="font-size: 2rem;" (click)="calc('-')">
+            -
+          </ion-button>
+          <ion-button color="primary" style="font-size: 2rem;" (click)="calc('+')">
+            +
+          </ion-button>
+          <ion-button color="primary" style="font-size: 2rem;" (click)="calc('*')">
+            x
+          </ion-button>
+          <ion-button color="primary" style="font-size: 2rem;" (click)="calc('/')">
+            /
+          </ion-button>
+        </ion-col>
+        <ion-col class="ion-text-start" style="font-size: 2rem;">
+          <p id="result" >Result</p>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
